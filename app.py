@@ -29,21 +29,14 @@ if 'page' not in st.session_state:
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "About Us", "FAQ & Resources"], 
-                       index=["Home", "About Us", "FAQ & Resources"].index(st.session_state.get('page', 'Home')))
+page = st.sidebar.radio("Go to", ["Home", "About Us", "FAQ & Resources"])
 
-# Update session state when page changes
-if page != st.session_state.page:
-    st.session_state.page = page
-    st.experimental_rerun()
-
-# Header
+# Header - always show the header
 st.image(IMAGE_ADDRESS, caption="EEG to Speech Conversion")
 
-# About Us Page
+# Show content based on selected page
 if page == "About Us":
     st.title("About BrainTalk")
-    
     st.markdown("""
     ## Welcome to BrainTalk
     
@@ -75,14 +68,9 @@ if page == "About Us":
     ### Getting Started
     Click on the 'Home' tab in the sidebar to begin converting your EEG data to speech.
     """)
-    
     st.markdown("---")
     st.markdown("© 2025 BrainTalk - Empowering Communication Through Technology")
-    
-    # Don't show the rest of the app on this page
-    st.stop()
 
-# FAQ & Resources Page
 elif page == "FAQ & Resources":
     st.title("Frequently Asked Questions & Resources")
     
@@ -127,11 +115,8 @@ elif page == "FAQ & Resources":
     
     st.markdown("---")
     st.markdown("Have more questions? Contact us at support@braintalk.example.com")
-    
-    # Don't show the rest of the app on this page
-    st.stop()
 
-# If we get here, we're on the Home page
+# Home page content will be shown by default
 
 def load_model():
     try:
