@@ -19,12 +19,23 @@ IMAGE_ADDRESS = "https://www.tsukuba.ac.jp/en/research-news/images/p202309041800
 st.set_page_config(
     page_title="BrainTalk - EEG to Speech",
     page_icon="🧠",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
+
+# Initialize session state for page navigation
+if 'page' not in st.session_state:
+    st.session_state.page = 'Home'
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Home", "About Us", "FAQ & Resources"])
+page = st.sidebar.radio("Go to", ["Home", "About Us", "FAQ & Resources"], 
+                       index=["Home", "About Us", "FAQ & Resources"].index(st.session_state.get('page', 'Home')))
+
+# Update session state when page changes
+if page != st.session_state.page:
+    st.session_state.page = page
+    st.experimental_rerun()
 
 # Header
 st.image(IMAGE_ADDRESS, caption="EEG to Speech Conversion")
@@ -204,6 +215,7 @@ def main():
         'T': 'https://drive.google.com/file/d/1lPiy9bhZ9bSQcW75wlZl6WUNEU9yH8Cw/view?usp=drive_link',
         'Y': 'https://drive.google.com/file/d/1rlFXtwMHK1tJjsetPfFa42cVo0xMn1ea/view?usp=drive_link'
     }
+    
     
     # Create a row of download buttons
     cols = st.columns(5)  # 5 columns for better layout
