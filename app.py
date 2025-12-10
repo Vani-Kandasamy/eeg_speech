@@ -193,16 +193,16 @@ def main():
     
     # Dictionary of sample EDF files with their Google Drive links
     edf_links = {
-        'A': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_A',
-        'C': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_C',
-        'F': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_F',
-        'H': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_H',
-        'J': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_J',
-        'M': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_M',
-        'P': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_P',
-        'S': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_S',
-        'T': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_T',
-        'Y': 'https://drive.google.com/uc?export=download&id=YOUR_DRIVE_FILE_ID_Y'
+        'A': 'https://drive.google.com/file/d/1ckD6gt7Z_Lkttg6kUv90ZbLQlanLP6NA/view?usp=drive_link',
+        'C': 'https://drive.google.com/file/d/1otwd0q5RWLbZZSW3BT7Fnt06cdMZO9FA/view?usp=drive_link',
+        'F': 'https://drive.google.com/file/d/1TGfrtfbLxvOlhQZrN-quUQmyP30X2rMh/view?usp=drive_link',
+        'H': 'https://drive.google.com/file/d/1MGTMQTeZXIvWEwrZM5GOoc0tlA-Ahqsg/view?usp=drive_link',
+        'J': 'https://drive.google.com/file/d/1revVfd-cHpLdvvyogTQdBGaNaosYUDpV/view?usp=drive_link',
+        'M': 'https://drive.google.com/file/d/1tc4Bv1Si11FFI_KsGWOnqTXvO6GEll61/view?usp=drive_link',
+        'P': 'https://drive.google.com/file/d/1ODZ0mc2LdHAG-BtmPYx8gyAasuhLlJN-/view?usp=drive_link',
+        'S': 'https://drive.google.com/file/d/1PsHjwSRjchDysKEpMv4QCH7VF6VuQkR6/view?usp=drive_link',
+        'T': 'https://drive.google.com/file/d/1lPiy9bhZ9bSQcW75wlZl6WUNEU9yH8Cw/view?usp=drive_link',
+        'Y': 'https://drive.google.com/file/d/1rlFXtwMHK1tJjsetPfFa42cVo0xMn1ea/view?usp=drive_link'
     }
     
     # Create a row of download buttons
